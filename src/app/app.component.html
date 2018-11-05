@@ -1,0 +1,31 @@
+<div (click)=home() #logo class="sl-logo text-center">
+    Mesa local
+</div>
+<div #boton (click)="menu(logo, boton, lateral, main, show)" class="navicon-left">
+  <img class="img-fluid"  src="../assets/img/menu.png">
+</div>
+<div #lateral class="sl-sideleft ps ps--theme_default">
+
+  <a class="menu-item" routerLink="eventos" routerLinkActive="active" >Participa</a>
+
+  <a class="menu-item" routerLink="validar" routerLinkActive="active" >Validar certificado</a>
+
+  <a class="menu-item" *ngIf="sesion.getEstado()!='notlogued'"  routerLink="cursos"  routerLinkActive="active">Mis cursos</a>
+  <a class="menu-item" *ngIf="sesion.getEstado()!='notlogued'"  routerLink="certificados"  routerLinkActive="active">Mis certificados</a>
+  <a class="menu-item" *ngIf="sesion.getEstado()!='notlogued'"  routerLink="solicitud"  routerLinkActive="active">Solicitud genérica</a>
+    
+</div>
+<div #cabezera class="sl-header">
+    
+     
+        <a #iniciar *ngIf="sesion.getEstado()=='notlogued'" class="header-right justify-content-center" routerLink="login" routerLinkActive="active" >Iniciar sesión</a>
+        <a #cerrar routerLink="" routerLinkActive="active" class="header-right justify-content-center" (click)="login.logout()" *ngIf="sesion.getEstado()!='notlogued'" >Cerrar sesión</a>
+    
+    
+    
+</div>
+  <div #show (click)="menu(logo, boton, lateral, main, show)" class="show"></div>
+<div #main class="sl-mainpanel">
+  <router-outlet></router-outlet>
+</div>
+  

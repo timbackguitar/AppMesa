@@ -1,0 +1,16 @@
+
+  <div class="col-md-4 offset-md-4">
+    <div class="card">
+      <h3 class="card-header">PANEL DE CONTROL</h3>
+      <form  class="card-body">
+        <label for="usuario">Nombre</label>
+        <input #cadena type="text" name="usuario" class="form-control"> 
+        <label for="usuario">Apellidos</label>
+        <input #cadena type="text" name="apellidos" class="form-control"> 
+        <label for="usuario">Dirección</label>
+        <input #cadena type="text" name="direccion" class="form-control"> 
+        <button (click)="muestraUsuario(cadena)" class="btn btn-primary btn-block mt-4">Modificar datos</button>
+      </form>
+
+    </div>
+  </div>

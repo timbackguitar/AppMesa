@@ -1,0 +1,18 @@
+<div class="card mt-2">
+    
+    <div  class="card-body">
+      <div class="float-left" style="width:30%">
+        <img class="img-fluid" style="max-width: 100%;" src="{{tarjeta.getImg()}}">
+      </div>
+      <div class="float-left p-4 " style="width:70%">
+          <h3>{{tarjeta.getNombre()}}</h3>
+          <p #descripcion >{{tarjeta.getSubDes()}}...</p><p><a #leer class="leer" (click)="leerMas(descripcion, tarjeta, leer)">Leer más...</a></p>
+      </div>
+      
+    </div>
+    <div class="card-bottom p-4">
+      <h5 class="float-left text-left">Asociación: {{tarjeta.getAsoc()}}</h5>
+      <button class="btn float-right btn-success">Inscribete</button>
+    </div>
+
+  </div>

@@ -1,0 +1,11 @@
+<div class="row m-0">
+    <div class="col-md-10 offset-md-1">
+      <div class="card">
+        <h3 class="card-header text-center">Últimos eventos</h3>
+        <div  class="card-body">
+          <app-tarjeta *ngFor="let tarjeta of tarjetas" [datos]="tarjeta" ></app-tarjeta>
+        </div>
+  
+      </div>
+    </div>
+  </div>

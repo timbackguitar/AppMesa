@@ -1,0 +1,124 @@
+body{
+    color: #868ba1;
+}
+.sl-header {
+    height: 60px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left:60px;
+    z-index:1000;
+    background-color: #2b333e;
+    
+    align-items: center;
+    justify-content: space-between;
+}
+.sl-logo {
+    position: fixed;
+    top: 0;
+    left: -230px;
+    width: 230px;
+    height: 60px;
+    background-color: #384250;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    z-index: 1030;
+    transition: all 0.2s ease-in-out;
+    color: white;
+    cursor: pointer;
+}
+.navicon-right {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    background-color: #252c35;
+    align-items: center;
+    justify-content: center;
+}
+.navicon-left {
+    width: 60px;
+    height: 60px;
+    padding: 21px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: #313a47;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 3000;
+    transition: all 0.2s ease-in-out;
+}
+.sl-sideleft {
+    position: fixed;
+    top: 60px;
+    left: -230px;
+    bottom: 0;
+    z-index: 3000;
+    width: 230px;
+    background-color: #fff;
+    padding: 10px;
+    overflow-y: auto;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.21);
+}
+
+.sl-mainpanel {
+    position: relative;
+    margin-top: 60px;
+    margin-left:0px;
+    background-color: #d8dce3;
+    transition: all 0.2s ease-in-out;
+    min-height: 100%;
+}
+.show{
+    content: '';
+    position: fixed;
+    top: 60px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2000;
+    background-color: rgba(43, 51, 62, 0.25);
+    display: none;
+}
+.menu-item{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 15px;
+    height: 40px;
+    text-decoration: none;
+    color: #495057 !important;
+    font-weight: 400;
+    border-top: 1px solid #e9ecef;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: rgb(233, 236, 239);
+}
+.menu-item:hover{
+   background-color:#dee3ea;
+}
+.header-right{
+    color: white !important;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    float: right;
+    height: 100%;
+
+    
+}
+.header-right:hover{
+    background-color:#313a47;
+    text-decoration: none;
+}
+@media(max-width: 650px){
+    .header-right{
+        width: 100px;
+    }
+}

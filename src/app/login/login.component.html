@@ -1,0 +1,14 @@
+
+  <div style="padding-top: 100px;padding-bottom: 200px" class="col-md-4 offset-md-4">
+    <div class="card">
+      <h3 class="card-header">Iniciar sesión</h3>
+      <form #loginForm (ngSubmit)="login(loginForm)" class="card-body">
+        <label for="correo">Correo </label>
+        <input type="text" name="correo" class="form-control" autofocus> 
+        <label for="pass">Contraseña: </label>
+        <input type="password" name="pass" class="form-control"> 
+        <input type="submit" value="Enviar" class="btn btn-primary btn-block mt-4">
+
+      </form>
+    </div>
+  </div>
